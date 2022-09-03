@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Colors.blue.shade700,
+        body:SafeArea(
+          child: Row(
+            // mainAxisSize: MainAxisSize.min,
+            // verticalDirection: VerticalDirection.up,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              // Icon(Icons.star, size: 100),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.orange,
+                child: Text('Container 1'),
+              ),
+              SizedBox(
+                width: 10.0,
+              ), // A TYPE OF CUSTOM MAIN AXIS ALIGNMENT
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.white,
+                child: Text('Container 2'),
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.white,
+                child: Text('Container 3'),
+              ),
+              SizedBox(
+                width: 10.0,
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.green,
+                child: Text('Container 4'),
+              ),
+              Container(
+                height: double.infinity,
+              )// JUST USED TO CROSS ALIGN ALL CONTAINERS TO END
+            ],
+          ),
+        ),
+        ),
+      );
+  }
+}
